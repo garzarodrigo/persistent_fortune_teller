@@ -7,6 +7,15 @@ Rails.application.routes.draw do
   # VARIABLE ROUTES
   # =======================
 
-  # get("/signs/:the_sign",         { :controller => "zodiacs", :action => "sign" })
-  # get("/creatures/:the_creature", { :controller => "zodiacs", :action => "creature" })
+  get("/random/:min/:max",         { :controller => "fortunes", :action => "within_range" })
+
+  get("/signs/:the_sign",         { :controller => "zodiacs", :action => "sign" })
+  get("/creatures/:the_creature", { :controller => "zodiacs", :action => "creature" })
+
+
+  get("/zodiacs/new", {:controller => "zodiacs", :action => "new_form"})
+  get("")
+
+  # get("/creatures/:the_id", { :controller => "zodiacs", :id => "id" })
+  get("/zodiacs", { :controller => "zodiacs", :action => "index"})
 end

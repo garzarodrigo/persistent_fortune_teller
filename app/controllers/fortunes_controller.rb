@@ -1,4 +1,13 @@
 class FortunesController < ApplicationController
+
+  def within_range
+
+    @min = params["min"]
+    @max = params["max"]
+
+  end
+
+
   def lucky
     @first_number = rand(100)
     @second_number = rand(100)
